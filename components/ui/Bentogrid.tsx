@@ -60,13 +60,13 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden group/bento hover:shadow-xl transition rounded-3xl duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-white/[0.1]",
+        "row-span-1 relative text-red-50 overflow-hidden group/bento hover:shadow-xl transition rounded-3xl duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-white/[0.1]",
         className
       )}
       style={{
-        background: "rgb(2,0,36)",
+        background: "rgb(159,23,23)",
         backgroundColor:
-          "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 73%, rgba(0,212,255,1) 100%)",
+          "linear-gradient(90deg, rgba(117,4,4,1) 0%, rgba(162,28,28,1) 26%, rgba(255,220,220,1) 71%)",
       }}
       key={id}
     >
@@ -105,7 +105,7 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10">
+          <div className="font-sans font-extralight text-red-100 text-sm md:text-xs lg:text-base z-10">
             {description}
           </div>
           <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
@@ -119,25 +119,25 @@ export const BentoGridItem = ({
         )} */}
 
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 lg:gap-5">
-                {["Typescript", "Azure DevOps", "Git"].map((item) => (
+            <div className="flex gap-1 lg:gap-5 w-fit absolute right-3 lg:-right-2">
+              <div className="flex flex-col gap-3 lg:gap-5 ">
+                {["Typescript", "Azure DevOps", "Git",].map((item) => (
                   <span
                     key={item}
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg-text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e]"
+                    className="py-2 lg:py-3 lg:px-3 px-3 text-xs lg-text-base lg:max-xl:opacity-50 opacity-100 font-bold rounded-lg text-center bg-red-100 text-red-800"
                   >
                     {item}
                   </span>
                 ))}
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                <span className="py-4  px-3 rounded-lg text-center bg-red-300" />
               </div>
               <div className="flex flex-col gap-3 lg:gap-5">
                 {" "}
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                <span className="py-4 px-3 rounded-lg text-center bg-red-300" />
                 {["React.js", "Next.js", "Cypress"].map((item) => (
                   <span
                     key={item}
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg-text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e]"
+                    className="py-2 lg:py-3 lg:px-4 px-3 text-xs lg-text-base lg:max-xl:opacity-50 opacity-100 rounded-lg text-center text-red-800 font-bold bg-red-100"
                   >
                     {item}
                   </span>
