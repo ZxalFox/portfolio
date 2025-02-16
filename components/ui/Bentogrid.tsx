@@ -60,13 +60,12 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative text-red-50 overflow-hidden group/bento hover:shadow-xl transition rounded-3xl duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-white/[0.1]",
+        "row-span-1 relative text-red-50 overflow-hidden group/bento hover:shadow-xl transition rounded-3xl duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 ",
         className
       )}
       style={{
-        background: "rgb(159,23,23)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(117,4,4,1) 0%, rgba(162,28,28,1) 26%, rgba(255,220,220,1) 71%)",
+        background: "#E03848",
+        backgroundColor: "linear-gradient(135deg, #E03848, #F43F8F)",
       }}
       key={id}
     >
@@ -95,8 +94,10 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 6 && (
-          <BackgroundGradientAnimation>
-            {/* <div className="absolute z-50 flex inset-0 items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl" /> */}
+          <BackgroundGradientAnimation gradientBackgroundStart="#E03848" gradientBackgroundEnd="#F43F8F"
+          firstColor="#E03848"
+          >
+            
           </BackgroundGradientAnimation>
         )}
         <div
@@ -121,7 +122,7 @@ export const BentoGridItem = ({
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute right-3 lg:-right-2">
               <div className="flex flex-col gap-3 lg:gap-5 ">
-                {["Typescript", "Azure DevOps", "Git",].map((item) => (
+                {["Typescript", "Azure DevOps", "Git"].map((item) => (
                   <span
                     key={item}
                     className="py-2 lg:py-3 lg:px-3 px-3 text-xs lg-text-base lg:max-xl:opacity-50 opacity-100 font-bold rounded-lg text-center bg-red-100 text-red-800"
@@ -165,7 +166,7 @@ export const BentoGridItem = ({
                 title={copied ? "Email copied!" : "Copy my email"}
                 icon={<IoCopyOutline />}
                 position="left"
-                otherClasses="!bg-[#161a31]"
+                otherClasses="!text-red-800 hover:!text-white"
                 handleClick={handleCopy}
               />
             </div>
